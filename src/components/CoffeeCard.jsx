@@ -11,36 +11,36 @@ export default function CoffeeCard({data}) {
         <div className='product-card'>
           {data.map((item) => {
             return (
-              <Card
+              <Card className='cards'
                 style={{
                   width: "18rem",
                   position: 'relative'
                 }}
                 key={item.id}
               >
-                <CardImg alt={item.name} src={item.image} />
+                <CardImg alt={item.name} src={item.image} className='card-image' />
                 {item.popular && <CardImgOverlay >
                   <div className='popular'>Popular</div>
                 </CardImgOverlay>}
-                <CardBody>
-                  <CardLink href="#">{item.name}</CardLink>
-                  <div>{item.price}</div>
+                <CardBody className='card-name-price'>
+                  <CardLink >{item.name}</CardLink>
+                  <div className='card-price'>{item.price}</div>
                 </CardBody>
-                <CardBody>
+                <CardBody className='cards-info'>
                   {item.rating === null && (
-                    <div>
+                    <div className='card-rating'>
                       <img src="src/assets/Star.svg" />
-                      <span>No Ratings</span>
-                      {item.available===false && <span>Sold out</span>}
+                      <span className='no-ratings'>No Ratings</span>
+                      <p style={{color:"#1b1d1f"}}>000</p>
                     </div>
                   )}
                   {item.rating !== null && (
-                    <div>
-                      <img src="src/assets/Star_fill.svg" /> <p>{Number(item.rating).toFixed(2)}</p>
-                      <span>{`(${item.votes} votes)`}</span>
-                      {item.available===false && <span>Sold out</span>}
+                    <div className='card-rating'>
+                      <img src="src/assets/Star_fill.svg" /> <p className='card-number'>{Number(item.rating).toFixed(2)}</p>
+                      <span className='card-votes'>{`(${item.votes} votes)`}</span>
                     </div>
                   )}
+                  {item.available===false && <span className='card-available'>Sold out</span>}
                 </CardBody>
               </Card>
             );
