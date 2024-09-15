@@ -1,0 +1,83 @@
+*{
+  border: 1px solid white;
+}
+:root {
+  --Sarı: #f6c768;
+  --Açık-Gri: #6f757c;
+  --Koyu-Gri: #1b1d1f;
+  --Siyah: #111315;
+  --Açık-Yeşil: #bee3cc;
+  --Bej: #fef7ee;
+}
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #1b1d1f;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  font-family: "DM Sans", sans-serif;
+}
+.headerCard {
+  width: 40%;
+  margin: auto;
+}
+.header-title{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.header-text{
+  font-size: 1rem;
+  color: var(--Açık-Gri);
+  font-weight: 500;
+}
+.button-group{
+  display: flex;
+  justify-content: center;
+  gap:1rem;
+}
+.header-button{
+  background-color: var(--Koyu-Gri);
+  color:var(--Bej);
+  border:none;
+  font-size: 0.87rem;
+  font-weight: 500;
+}
+.active{
+  background-color: var(--Açık-Gri);
+  font-size: 0.87rem;
+  color: var(--Bej);
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border: var(--Açık-Gri);
+  font-weight: 500;
+}
+.popular {
+  position: absolute;
+  width: 18%;
+  top: 0;
+  background-color: var(--Sarı);
+  margin-left: 10%;
+  margin-top: 5%;
+  color: var(--Siyah);
+  height: 4%;
+  padding: 0.2rem;
+  border-radius: 4rem;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.product-card{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:1rem;
+  width: 80%;
+  margin: 0 auto;
+  place-content: center;
+  place-items: center;
+}
