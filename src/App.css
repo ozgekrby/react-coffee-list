@@ -19,10 +19,15 @@
   font-family: "DM Sans", sans-serif;
   margin-bottom: 10rem;
   color: var(--Bej);
+  background-image: url("src/assets/vector.svg");
+  background-repeat: no-repeat;
+  background-position-x:62% ;
+  background-position-y:8% ;
 }
 .headerCard {
   width: 40%;
   margin: auto;
+  margin-top: 5%;
 }
 .header-title {
   font-size: 2rem;
