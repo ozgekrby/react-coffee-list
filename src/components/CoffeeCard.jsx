@@ -29,14 +29,14 @@ export default function CoffeeCard({data}) {
                 <CardBody className='cards-info'>
                   {item.rating === null && (
                     <div className='card-rating'>
-                      <img src="src/assets/Star.svg" />
+                      <img src="public/Star.svg" />
                       <span className='no-ratings'>No Ratings</span>
                       <p style={{color:"#1b1d1f"}}>000</p>
                     </div>
                   )}
                   {item.rating !== null && (
                     <div className='card-rating'>
-                      <img src="src/assets/Star_fill.svg" /> <p className='card-number'>{Number(item.rating).toFixed(2)}</p>
+                      <img src="public/Star_fill.svg" /> <p className='card-number'>{Number(item.rating).toFixed(2)}</p>
                       <span className='card-votes'>{`(${item.votes} votes)`}</span>
                     </div>
                   )}
